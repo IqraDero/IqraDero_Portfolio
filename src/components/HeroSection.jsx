@@ -1,6 +1,6 @@
 import React from 'react';
 import Myimage from '../assets/myimage.jpeg';
-import Resume from '../assets/CV.pdf'
+import Resume from '../assets/IqraDero_CV_WebDev.pdf';
 
 const HeroSection = () => {
     return (

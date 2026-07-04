@@ -82,7 +82,7 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
           {contactInfo.map((item) => {
             const Icon = item.icon;
 
@@ -92,14 +92,14 @@ const ContactSection = () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-[#0B1220] border border-slate-700 rounded-2xl p-5 hover:border-primary hover:-translate-y-2 transition-all duration-300"
+               className="group bg-[#0B1220] border border-slate-700 rounded-2xl p-5 h-full flex flex-col ..."
               >
                 <div className="w-14 h-14 rounded-xl bg-[#050816] border border-slate-700 flex items-center justify-center mb-4 group-hover:border-primary">
                   <Icon className="text-primary text-2xl" />
                 </div>
 
                 <h3 className="text-white font-semibold">{item.title}</h3>
-                <p className="text-gray-400 text-sm mt-2">{item.value}</p>
+                <p className="text-gray-400 text-sm mt-2 break-all">{item.value}</p>
               </a>
             );
           })}
@@ -109,7 +109,7 @@ const ContactSection = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="max-w-lg mx-auto bg-[#0B1220] border border-slate-700 rounded-2xl p-6 hover:border-primary transition-all duration-300"
+         className="w-full max-w-lg mx-auto bg-[#0B1220] border border-slate-700 rounded-2xl p-6 hover:border-primary transition-all duration-300"
         >
           <div className="grid md:grid-cols-2 gap-4">
             <div>
